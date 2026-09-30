@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everything Wool | Beautiful Wool & Yarn</title>
+  <meta name="description" content="Everything Wool — quality wool, yarn and knitting essentials for makers.">
+  <style>
+    :root{
+      --cream:#fbf7ef; --paper:#fffdf8; --brown:#4a3428; --rust:#a85d3b;
+      --sage:#6f7e63; --gold:#c49a5a; --text:#30251f; --muted:#756960;
+      --shadow:0 12px 35px rgba(67,45,32,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Georgia, "Times New Roman", serif;background:var(--cream);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.96);backdrop-filter:blur(8px);border-bottom:1px solid #eadfce}
+    .nav{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 22px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:bold;font-size:1.25rem;color:var(--brown)}
+    .brand-mark{width:44px;height:44px;border-radius:50%;background:var(--rust);display:grid;place-items:center;color:white;font-size:1.35rem}
+    nav{display:flex;gap:25px;align-items:center}
+    nav a{font-size:.98rem;color:var(--brown)}
+    nav a:hover{color:var(--rust)}
+    .cart{background:var(--brown);color:#fff;padding:8px 13px;border-radius:20px;cursor:pointer;border:0;font-family:inherit}
+    main section{max-width:1120px;margin:auto;padding:78px 22px}
+    .hero{min-height:74vh;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+    .eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--rust);font-size:.78rem;font-weight:bold}
+    h1{font-size:clamp(3rem,7vw,5.5rem);line-height:.98;color:var(--brown);margin:16px 0 25px}
+    h2{font-size:2.4rem;color:var(--brown);margin-bottom:12px}
+    .hero p{font-size:1.2rem;color:var(--muted);max-width:620px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-block;padding:13px 22px;border-radius:28px;background:var(--rust);color:white;font-weight:bold;border:2px solid var(--rust)}
+    .btn.secondary{background:transparent;color:var(--brown);border-color:#cbbbaa}
+    .hero-art{min-height:430px;border-radius:40% 40% 18px 18px;background:linear-gradient(145deg,#d7c4a6,#b89470);box-shadow:var(--shadow);display:grid;place-items:center;position:relative;overflow:hidden}
+    .yarn{font-size:8rem;filter:drop-shadow(0 15px 15px rgba(0,0,0,.15));}
+    .hero-art:after{content:"HANDMADE • NATURAL • COSY";position:absolute;bottom:25px;letter-spacing:3px;color:#fff;font-size:.72rem}
+    .intro{text-align:center;max-width:760px}
+    .intro p{color:var(--muted)}
+    .products{background:var(--paper);max-width:none}
+    .products-inner{max-width:1120px;margin:auto;padding:78px 22px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}
+    .section-head p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid #eadfce;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .product-img{height:220px;display:grid;place-items:center;font-size:5rem;background:#efe5d5}
+    .card:nth-child(2) .product-img{background:#e2e8dc}
+    .card:nth-child(3) .product-img{background:#e9d8d0}
+    .card-body{padding:20px}
+    .card h3{font-size:1.35rem;color:var(--brown)}
+    .card p{color:var(--muted);font-size:.95rem;margin:6px 0 15px}
+    .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+    .price{font-weight:bold;color:var(--rust);font-size:1.1rem}
+    .buy{border:0;background:var(--sage);color:white;padding:9px 14px;border-radius:20px;cursor:pointer;font-family:inherit;font-weight:bold}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about-box{background:#e9dfcf;padding:40px;border-radius:25px}
+    .about p,.contact p{color:var(--muted);margin-bottom:14px}
+    .contact{background:var(--brown);color:#fff;max-width:none}
+    .contact-inner{max-width:1120px;margin:auto;padding:78px 22px;display:grid;grid-template-columns:1fr 1fr;gap:45px}
+    .contact h2{color:#fff}.contact p{color:#e7dcd1}
+    form{display:grid;gap:12px}
+    input,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid #d8cabb;background:#fff;font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    form button{border:0;background:var(--gold);color:#fff;padding:13px;border-radius:24px;font-family:inherit;font-weight:bold;cursor:pointer}
+    footer{background:#2e211b;color:#e7dcd1;text-align:center;padding:25px 20px;font-size:.9rem}
+    #shop{scroll-margin-top:70px}
+    .notice{font-size:.82rem;color:var(--muted);margin-top:14px}
+    @media(max-width:780px){
+      nav{gap:10px} nav a{font-size:.82rem}.cart{padding:7px 9px}
+      .hero,.about-grid,.contact-inner{grid-template-columns:1fr}
+      .hero{padding-top:45px}.hero-art{min-height:300px}
+      .grid{grid-template-columns:1fr}
+      .section-head{display:block}.section-head p{margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="brand" href="#home"><span class="brand-mark">🧶</span> Everything Wool</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="cart" onclick="showCart()">Basket (<span id="cartCount">0</span>)</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div>
+      <div class="eyebrow">Everything Wool</div>
+      <h1>Cosy wool for creative hands.</h1>
+      <p>Quality wool, beautiful yarn and thoughtful essentials for knitting, crochet and all your favourite cosy creations.</p>
+      <div class="buttons">
+        <a class="btn" href="#shop">Shop the collection</a>
+        <a class="btn secondary" href="#about">Our story</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-label="Decorative yarn illustration"><div class="yarn">🧶</div></div>
+  </section>
+
+  <section class="intro">
+    <div class="eyebrow">Made for makers</div>
+    <h2>Wool you love, from a shop that cares.</h2>
+    <p>Everything Wool is a warm, friendly place for makers to find quality materials and inspiration. This website is ready to be filled with your real products, prices and brand details.</p>
+  </section>
+
+  <section id="shop" class="products">
+    <div class="products-inner">
+      <div class="section-head">
+        <div><div class="eyebrow">The shop</div><h2>Featured products</h2></div>
+        <p>Sample products — replace these with your own stock.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="product-img">🧶</div>
+          <div class="card-body"><h3>Natural Wool Yarn</h3><p>Soft, versatile wool for cosy handmade projects.</p><div class="price-row"><span class="price">£12.00</span><button class="buy" onclick="addToCart('Natural Wool Yarn',12)">Add to basket</button></div></div>
+        </article>
+        <article class="card">
+          <div class="product-img">🧵</div>
+          <div class="card-body"><h3>Heritage Yarn</h3><p>A classic yarn choice with a beautifully natural feel.</p><div class="price-row"><span class="price">£14.50</span><button class="buy" onclick="addToCart('Heritage Yarn',14.5)">Add to basket</button></div></div>
+        </article>
+        <article class="card">
+          <div class="product-img">🧶</div>
+          <div class="card-body"><h3>Chunky Wool</h3><p>Chunky and cosy, perfect for blankets and winter makes.</p><div class="price-row"><span class="price">£16.00</span><button class="buy" onclick="addToCart('Chunky Wool',16)">Add to basket</button></div></div>
+        </article>
+      </div>
+      <p class="notice">Basket buttons are a working front-end demo. Connect a secure payment provider such as Stripe or PayPal before accepting real customer payments.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow">About us</div>
+        <h2>Welcome to Everything Wool.</h2>
+        <p>We believe wool is more than a material — it is a way to slow down, make something special and share a little warmth.</p>
+        <p>Tell your customers here about how Everything Wool began, where you source your wool, what makes your products special and what you love about helping other makers.</p>
+      </div>
+      <div class="about-box">
+        <h3>Why choose us?</h3>
+        <p>✓ Carefully selected wool and yarn</p>
+        <p>✓ Friendly, personal service</p>
+        <p>✓ Products chosen with makers in mind</p>
+        <p>✓ A passion for handmade creativity</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="eyebrow" style="color:#d9b77b">Get in touch</div>
+        <h2>We'd love to hear from you.</h2>
+        <p>Replace the details below with your real business contact information.</p>
+        <p><strong>Email:</strong> everything-wool@outlook.com</p>
+        <p><strong>Address:</strong> We do not currently have a location but we are hoping to get one soon</p>
+        <p><strong>WhatsApp:</strong> Follow our latest updates and products on our WhatsApp channel.</p>
+        <button onclick="https://whatsapp.com/channel/0029VbBwCRC5EjxseNPRXK3e">Our Whatsapp Channel</button>
+      </div>
+      <form onsubmit="sendMessage(event)">
+        <input id="name" required placeholder="Your name" aria-label="Your name">
+        <input id="email" type="email" required placeholder="Your email" aria-label="Your email">
+        <textarea id="message" required placeholder="How can we help?" aria-label="Your message"></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Everything Wool · Wool, yarn & handmade inspiration</footer>
+
+<script>
+  let cart = [];
+  function addToCart(name, price){
+    cart.push({name,price});
+    document.getElementById('cartCount').textContent = cart.length;
+    alert(name + ' has been added to your basket.');
+  }
+  function showCart(){
+    if(!cart.length){ alert('Your basket is empty.'); return; }
+    const total = cart.reduce((sum,item)=>sum+item.price,0).toFixed(2);
+    alert('Basket:\\n\\n' + cart.map(i=>'• '+i.name+' — £'+i.price.toFixed(2)).join('\\n') + '\\n\\nTotal: £'+total + '\\n\\nThis demo needs a payment provider connected before real checkout.');
+  }
+  function sendMessage(e){
+    e.preventDefault();
+    alert('Thank you! Your message form is ready to connect to your email service.');
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
