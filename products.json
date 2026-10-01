@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Example Wool Yarn",
+    "category": "Yarn",
+    "price": 4.5,
+    "stock": 12,
+    "image": "assets/logo.jpeg",
+    "featured": true,
+    "description": "Replace this sample row with your real product."
+  },
+  {
+    "name": "Example Knitting Wool",
+    "category": "Wool",
+    "price": 6.0,
+    "stock": 0,
+    "image": "assets/logo.jpeg",
+    "featured": false,
+    "description": "Replace this sample row with your real product."
+  }
+]

@@ -1,0 +1,37 @@
+name: Update website from Excel
+
+on:
+  push:
+    paths:
+      - 'everything-wool-data-spreadsheet.xlsx'
+      - 'scripts/build_stock.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Excel reader
+        run: pip install -r requirements.txt
+
+      - name: Convert Excel stock to website data
+        run: python scripts/build_stock.py
+
+      - name: Commit updated product data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/products.json
+          git diff --cached --quiet || git commit -m "Update stock from Excel"
+          git push
