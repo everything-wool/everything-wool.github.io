@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Everything Wool</title>
+  <meta name="description" content="Everything Wool — wool, yarn and craft supplies.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="assets/logo.jpeg" alt="Everything Wool logo"><span>Everything Wool</span></a>
+  <nav><a class="active" href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About us</a><a href="contact.html">Contact</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">WELCOME TO EVERYTHING WOOL</p>
+      <h1>Everything you need for your next wool project.</h1>
+      <p>Browse our products, check availability and find the wool and craft supplies you need.</p>
+      <a class="button" href="products.html">Shop products</a>
+    </div>
+    <img src="assets/logo.jpeg" alt="" class="hero-logo">
+  </section>
+  <section class="section">
+    <h2>Featured products</h2>
+    <div id="featured" class="product-grid"></div>
+  </section>
+</main>
+<footer>© <span id="year"></span> Everything Wool</footer>
+<script src="app.js"></script>
+<script>loadProducts('featured', {featuredOnly:true, limit:4});</script>
+</body>
+</html>
