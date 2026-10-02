@@ -1,20 +1,18 @@
 [
   {
-    "name": "Example Wool Yarn",
-    "category": "Yarn",
-    "price": 4.5,
-    "stock": 12,
-    "image": "assets/logo.jpeg",
-    "featured": true,
-    "description": "Replace this sample row with your real product."
+    "Product ID": "gfafyj918735",
+    "Product Name": "Example product",
+    "Description": "Example description",
+    "Price": "12.99",
+    "Image URL": "https://example.com/image.jpg",
+    "Product ID": "gfafyj918735"
   },
   {
-    "name": "Example Knitting Wool",
-    "category": "Wool",
-    "price": 6.0,
-    "stock": 0,
-    "image": "assets/logo.jpeg",
-    "featured": false,
-    "description": "Replace this sample row with your real product."
+    "Product ID": "kqzmxp482106",
+    "Product Name": "Another product",
+    "Description": "Another description",
+    "Price": "15.99",
+    "Image URL": "https://example.com/image2.jpg",
+    "Product ID": "kqzmxp482106"
   }
 ]
