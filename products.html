@@ -1,26 +1,148 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-    <link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Products | Everything Wool</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .stock-status {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .low-stock {
+      background: #fff1c2;
+      color: #795900;
+    }
+    .in-stock {
+      background: #e6f5e9;
+      color: #28643a;
+    }
+    .out-of-stock {
+      background: #fbe4e4;
+      color: #8b2222;
+    }
+    .product-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="index.html"><img src="assets/logo.jpeg" alt="Everything Wool logo"><span>Everything Wool</span></a>
-  <nav><a href="index.html">Home</a><a class="active" href="products.html">Products</a><a href="about.html">About us</a><a href="contact.html">Contact</a></nav>
+  <a class="brand" href="index.html">
+    <img src="assets/logo.jpeg" alt="Everything Wool logo">
+    <span>Everything Wool</span>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="products.html">Products</a>
+    <a href="about.html">About us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
+
 <main class="section">
-  <div class="page-heading"><div><p class="eyebrow">SHOP</p><h1>Our products</h1></div><input id="search" class="search" type="search" placeholder="Search products…"></div>
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">SHOP</p>
+      <h1>Our products</h1>
+    </div>
+    <input id="search" class="search" type="search" placeholder="Search products…">
+  </div>
+
   <div id="products" class="product-grid"></div>
 </main>
+
 <footer>© <span id="year"></span> Everything Wool</footer>
-<script src="app.js"></script>
+
 <script>
-loadProducts('products');
-document.getElementById('search').addEventListener('input', e => loadProducts('products', {search:e.target.value}));
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  let allProducts = [];
+
+  function escapeHTML(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function renderProducts(search = '') {
+    const container = document.getElementById('products');
+    const query = search.trim().toLowerCase();
+
+    const filtered = allProducts.filter(product => {
+      return (
+        String(product["Product Name"] || '').toLowerCase().includes(query) ||
+        String(product["Description"] || '').toLowerCase().includes(query)
+      );
+    });
+
+    if (!filtered.length) {
+      container.innerHTML = '<p>No products found.</p>';
+      return;
+    }
+
+    container.innerHTML = filtered.map(product => {
+      const stock = Number(product["Stock"]) || 0;
+      let stockHTML = '';
+
+      if (stock < 4) {
+        stockHTML = '<span class="stock-status low-stock">Low on stock</span>';
+      } else {
+        stockHTML = '<span class="stock-status in-stock">In stock</span>';
+      }
+
+      const image = product["Image URL"];
+      const imageHTML = image
+        ? `<img class="product-image" src="${escapeHTML(image)}" alt="${escapeHTML(product["Product Name"])}">`
+        : '';
+
+      const description = product["Description"]
+        ? `<p>${escapeHTML(product["Description"])}</p>`
+        : '';
+
+      return `
+        <article class="product-card">
+          ${imageHTML}
+          <h2>${escapeHTML(product["Product Name"])}</h2>
+          ${description}
+          <p class="price">£${escapeHTML(product["Price"])}</p>
+          ${stockHTML}
+        </article>
+      `;
+    }).join('');
+  }
+
+  fetch('products.json')
+    .then(response => {
+      if (!response.ok) throw new Error('Could not load products.json');
+      return response.json();
+    })
+    .then(products => {
+      allProducts = products;
+      renderProducts();
+    })
+    .catch(error => {
+      console.error(error);
+      document.getElementById('products').innerHTML =
+        '<p>Sorry, the products could not be loaded.</p>';
+    });
+
+  document.getElementById('search').addEventListener('input', event => {
+    renderProducts(event.target.value);
+  });
 </script>
 </body>
 </html>
