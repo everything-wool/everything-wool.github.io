@@ -1,36 +1,75 @@
-# Everything Wool website
+# 🧶 Everything Wool
 
-This is a GitHub Pages-ready static shop site.
+### Handmade with care, one stitch at a time.
 
-## Excel stock workflow
+Welcome to **Everything Wool** — a small handmade wool shop creating useful, cosy and colourful pieces with a personal touch.
 
-Put `everything-wool-data-spreadsheet.xlsx` in the root of the repository.
+🌐 **[Visit the Everything Wool website](https://everything-wool.github.io/)**
 
-The first row must contain headings. The importer recognises these names (or close variants):
+---
 
-- Name / Product / Product Name
-- Category
-- Price
-- Stock / Quantity / Qty
-- Image / Image URL
-- Featured
-- Description
+## 🧵 What We Make
 
-When the Excel file is committed/pushed to GitHub, the workflow in `.github/workflows/update-stock.yml` converts it to `data/products.json`. The website then displays the new stock.
+Our collection includes handmade wool creations such as:
 
-### Important
+|     🧢 Hats     |    🧣 Scarves    |       👜 Bags      |
+| :-------------: | :--------------: | :----------------: |
+| Handmade & cosy | Warm & colourful | Practical & unique |
 
-A website hosted on GitHub Pages cannot directly watch a private/local Excel file on someone's computer. The Excel workbook needs to be committed to the GitHub repository (or another online data service) for the automatic workflow to run.
+|    👛 Purses   |     🧸 Toys    |    🏡 Cushions   |
+| :------------: | :------------: | :--------------: |
+| Small & useful | Handmade gifts | Cosy home pieces |
 
-## WhatsApp
+And plenty of other handmade creations as our collection grows!
 
-The contact page links to the Everything Wool WhatsApp channel:
-https://whatsapp.com/channel/0029VbBwCRC5EjxseNPRXK3e
+---
 
-## Payments
+## 🧶 About Everything Wool
 
-This package is the catalogue/front-end. It does not process card payments yet. A payment provider or checkout backend needs to be connected before customers can securely pay online.
+Everything Wool is all about **handmade creativity, wool and making things with care**.
 
-## Existing site content
+Each item is created with attention to detail, making every piece a little different and giving handmade products their own character.
 
-The page structure is ready for the existing site's exact copy, product descriptions, contact details and other sections to be inserted. The colour variables are kept together in `styles.css` so the Everything Wool palette can be adjusted without changing the layout.
+> **Made by hand. Made with care. Made with wool. 🧶**
+
+---
+
+## 🌐 Find Us Online
+
+[![Website](https://img.shields.io/badge/Website-Everything%20Wool-8B5E3C?style=for-the-badge\&logo=googlechrome\&logoColor=white)](https://everything-wool.github.io/)
+
+[![GitHub](https://img.shields.io/badge/GitHub-Everything%20Wool-24292F?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/everything-wool)
+
+---
+
+## 🧵 Our Website
+
+The Everything Wool website is built to showcase our handmade collection and make it easy to discover what we're making.
+
+**→ [Explore Everything Wool](https://everything-wool.github.io/)**
+
+---
+
+## 🪡 Projects
+
+### 🛍️ Everything Wool Website
+
+Our online home for Everything Wool, featuring our handmade products and creations.
+
+**Repository:**
+[everything-wool.github.io](https://github.com/everything-wool/everything-wool.github.io)
+
+**Live website:**
+[everything-wool.github.io](https://everything-wool.github.io/)
+
+---
+
+## 💛 Handmade • Creative • Unique
+
+Whether it's a cosy hat, a colourful scarf, a handmade toy or something completely new, Everything Wool is about turning wool into something special.
+
+**Thanks for stopping by! 🧶**
+
+---
+
+<sub>© Everything Wool · Handmade with care</sub>
