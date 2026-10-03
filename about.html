@@ -1,22 +1,547 @@
-<!doctype html>
-<html lang="en-GB">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About us | Everything Wool</title><link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Everything Wool</title>
+
+    <meta name="description" content="Learn more about Everything Wool — handmade wool creations made with care, creativity and a personal touch.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f8f3ec;
+            color: #40352d;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: #fffaf4;
+            border-bottom: 1px solid #ded2c4;
+            padding: 20px;
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            text-decoration: none;
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: #76553f;
+        }
+
+        .logo span {
+            color: #a87952;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            color: #59483b;
+        }
+
+        nav a:hover {
+            color: #a87952;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 90px 20px 80px;
+            background:
+                linear-gradient(
+                    rgba(255, 250, 244, 0.88),
+                    rgba(248, 243, 236, 0.94)
+                );
+        }
+
+        .hero .emoji {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            color: #654936;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.25rem;
+            color: #756456;
+        }
+
+        .tagline {
+            margin-top: 20px;
+            font-style: italic;
+            color: #a06f48;
+        }
+
+        /* Main */
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #654936;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #756456;
+        }
+
+        /* About */
+        .about-card {
+            background: #fffaf4;
+            border: 1px solid #ded2c4;
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(90, 65, 45, 0.06);
+        }
+
+        .about-card p {
+            margin-bottom: 18px;
+        }
+
+        .about-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Products */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .product {
+            background: #fffaf4;
+            border: 1px solid #ded2c4;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(90, 65, 45, 0.09);
+        }
+
+        .product .icon {
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+        }
+
+        .product h3 {
+            color: #654936;
+            margin-bottom: 8px;
+        }
+
+        .product p {
+            color: #756456;
+        }
+
+        /* Quote */
+        .quote {
+            text-align: center;
+            background: #eadccc;
+            border-radius: 20px;
+            padding: 55px 25px;
+        }
+
+        .quote p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 1.7rem;
+            font-style: italic;
+            color: #5e4939;
+        }
+
+        .quote span {
+            display: block;
+            margin-top: 15px;
+            font-size: 2rem;
+        }
+
+        /* Website */
+        .website {
+            text-align: center;
+        }
+
+        .website-card {
+            background: #76553f;
+            color: white;
+            border-radius: 20px;
+            padding: 50px 25px;
+        }
+
+        .website-card h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .website-card p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #f7eee5;
+        }
+
+        .button {
+            display: inline-block;
+            background: #fffaf4;
+            color: #76553f;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            background: #f4e8db;
+        }
+
+        /* GitHub */
+        .github {
+            text-align: center;
+        }
+
+        .github a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            border: 2px solid #76553f;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #76553f;
+        }
+
+        .github a:hover {
+            background: #76553f;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #4d3d31;
+            color: #f8eee5;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #f1d6bb;
+            text-decoration: none;
+        }
+
+        /* Mobile */
+        @media (max-width: 750px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 0.95rem;
+            }
+
+            .hero {
+                padding: 65px 20px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .about-card {
+                padding: 28px 22px;
+            }
+
+            .quote p {
+                font-size: 1.35rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html"><img src="assets/logo.jpeg" alt="Everything Wool logo"><span>Everything Wool</span></a>
-  <nav><a href="index.html">Home</a><a href="products.html">Products</a><a class="active" href="about.html">About us</a><a href="contact.html">Contact</a></nav>
-</header>
-<main class="section narrow">
-  <p class="eyebrow">ABOUT EVERYTHING WOOL</p>
-  <h1>About us</h1>
-  <p>Everything Wool is a wool and craft shop. Use this page to tell customers about your shop, what you sell and what makes your business special.</p>
-  <p>This page is intentionally editable so you can replace the placeholder copy with the exact wording from your existing Everything Wool website.</p>
-</main>
-<footer>© <span id="year"></span> Everything Wool</footer><script src="app.js"></script>
+
+    <!-- Navigation -->
+    <header>
+        <div class="nav">
+
+            <a href="index.html" class="logo">
+                🧶 Everything <span>Wool</span>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="index.html#products">Products</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="emoji">🧶</div>
+
+        <h1>About Everything Wool</h1>
+
+        <p>
+            Handmade wool creations made with care, creativity
+            and a personal touch.
+        </p>
+
+        <div class="tagline">
+            Made by hand. Made with care. Made with wool.
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- About -->
+        <section>
+
+            <h2 class="section-title">Our Story</h2>
+
+            <p class="section-intro">
+                Welcome to Everything Wool — a small handmade wool shop
+                creating cosy, colourful and unique pieces.
+            </p>
+
+            <div class="about-card">
+
+                <p>
+                    Everything Wool is all about handmade creativity,
+                    wool and making things with care.
+                </p>
+
+                <p>
+                    From cosy hats and warm scarves to useful bags,
+                    colourful purses, handmade toys and cushions,
+                    our creations are made with attention to detail
+                    and a love of crafting.
+                </p>
+
+                <p>
+                    Because our products are handmade, every piece has
+                    its own character. Small differences are part of
+                    what makes handmade items special.
+                </p>
+
+                <p>
+                    We are always creating and exploring new ideas,
+                    so our collection can continue to grow with new
+                    handmade wool creations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Products -->
+        <section id="products">
+
+            <h2 class="section-title">What We Make</h2>
+
+            <p class="section-intro">
+                A selection of the handmade creations you can find
+                from Everything Wool.
+            </p>
+
+            <div class="products">
+
+                <div class="product">
+                    <div class="icon">🧢</div>
+                    <h3>Hats</h3>
+                    <p>
+                        Cosy handmade hats for keeping warm in style.
+                    </p>
+                </div>
+
+                <div class="product">
+                    <div class="icon">🧣</div>
+                    <h3>Scarves</h3>
+                    <p>
+                        Warm and colourful scarves made with care.
+                    </p>
+                </div>
+
+                <div class="product">
+                    <div class="icon">👜</div>
+                    <h3>Bags</h3>
+                    <p>
+                        Handmade bags that are both useful and unique.
+                    </p>
+                </div>
+
+                <div class="product">
+                    <div class="icon">👛</div>
+                    <h3>Purses</h3>
+                    <p>
+                        Small handmade pieces that are practical
+                        and full of character.
+                    </p>
+                </div>
+
+                <div class="product">
+                    <div class="icon">🧸</div>
+                    <h3>Handmade Toys</h3>
+                    <p>
+                        Fun wool creations made to bring a little
+                        handmade joy.
+                    </p>
+                </div>
+
+                <div class="product">
+                    <div class="icon">🏡</div>
+                    <h3>Cushions</h3>
+                    <p>
+                        Cosy handmade pieces for adding warmth
+                        to your home.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quote -->
+        <section>
+
+            <div class="quote">
+
+                <p>
+                    “Every stitch makes a difference, and every
+                    handmade piece has a story of its own.”
+                </p>
+
+                <span>🧶</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Website -->
+        <section class="website">
+
+            <div class="website-card">
+
+                <h2>Visit Everything Wool</h2>
+
+                <p>
+                    Explore our website and discover our latest
+                    handmade wool creations.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://everything-wool.github.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit Our Website
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- GitHub -->
+        <section class="github">
+
+            <h2 class="section-title">Follow Our Project</h2>
+
+            <p class="section-intro">
+                Our website is proudly hosted and developed through GitHub.
+            </p>
+
+            <a
+                href="https://github.com/everything-wool"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                🐙 Visit Everything Wool on GitHub
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            🧶 <strong>Everything Wool</strong>
+        </p>
+
+        <p>
+            Handmade with care.
+        </p>
+
+        <p>
+            <a href="https://everything-wool.github.io/">
+                everything-wool.github.io
+            </a>
+        </p>
+
+        <p>
+            © Everything Wool
+        </p>
+
+    </footer>
+
 </body>
 </html>
