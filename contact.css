@@ -1,0 +1,470 @@
+/* =====================================================
+EVERYTHING WOOL — CONTACT PAGE
+===================================================== */
+
+/* ---------- Base ---------- */
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Georgia, "Times New Roman", serif;
+background: #f8f3ec;
+color: #40352d;
+line-height: 1.7;
+}
+
+a {
+color: #76553f;
+}
+
+a:hover {
+color: #a87952;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+width: 100%;
+padding: 18px 30px;
+background: #fffaf4;
+border-bottom: 1px solid #ded2c4;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 25px;
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+
+text-decoration: none;
+color: #654936;
+
+font-size: 1.35rem;
+font-weight: bold;
+}
+
+.brand img {
+width: 48px;
+height: 48px;
+object-fit: cover;
+border-radius: 50%;
+}
+
+.brand:hover {
+color: #a87952;
+}
+
+/* ---------- Navigation ---------- */
+
+.site-header nav {
+display: flex;
+align-items: center;
+gap: 8px;
+flex-wrap: wrap;
+}
+
+.site-header nav a {
+padding: 8px 13px;
+
+text-decoration: none;
+color: #59483b;
+
+border-radius: 8px;
+
+font-weight: 600;
+
+transition:
+background 0.2s ease,
+color 0.2s ease;
+}
+
+.site-header nav a:hover {
+background: #eadccc;
+color: #654936;
+}
+
+.site-header nav a.active {
+background: #76553f;
+color: #fffaf4;
+}
+
+/* ---------- Main section ---------- */
+
+.section {
+width: 100%;
+max-width: 900px;
+
+margin: 0 auto;
+padding: 70px 25px 90px;
+}
+
+.section.narrow {
+max-width: 800px;
+}
+
+/* ---------- Page heading ---------- */
+
+.eyebrow {
+margin: 0 0 8px;
+
+color: #a06f48;
+
+font-size: 0.85rem;
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+h1 {
+margin: 0 0 12px;
+
+color: #654936;
+
+font-size: clamp(2.4rem, 6vw, 4rem);
+line-height: 1.15;
+}
+
+h2 {
+color: #654936;
+line-height: 1.3;
+}
+
+.section > p:not(.eyebrow) {
+color: #756456;
+font-size: 1.08rem;
+}
+
+/* ---------- Contact information card ---------- */
+
+.contact-card {
+margin-top: 35px;
+padding: 30px;
+
+background: #fffaf4;
+
+border: 1px solid #ded2c4;
+border-radius: 16px;
+
+box-shadow: 0 8px 25px rgba(90, 65, 45, 0.06);
+}
+
+.contact-card h2 {
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+.contact-card p {
+margin: 12px 0;
+}
+
+.contact-card a {
+font-weight: 600;
+text-decoration-thickness: 1px;
+text-underline-offset: 3px;
+}
+
+/* ---------- Contact form ---------- */
+
+.contact-form-section {
+margin-top: 55px;
+}
+
+.contact-form-section > p {
+color: #756456;
+}
+
+.contact-form {
+margin-top: 30px;
+
+display: flex;
+flex-direction: column;
+gap: 21px;
+
+padding: 32px;
+
+background: #fffaf4;
+
+border: 1px solid #ded2c4;
+border-radius: 16px;
+
+box-shadow: 0 8px 25px rgba(90, 65, 45, 0.06);
+}
+
+/* ---------- Form fields ---------- */
+
+.form-group {
+display: flex;
+flex-direction: column;
+gap: 7px;
+}
+
+.form-group label {
+color: #59483b;
+
+font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+
+padding: 13px 15px;
+
+border: 1px solid #d8cbbd;
+border-radius: 8px;
+
+background: #fff;
+
+color: #40352d;
+
+font-family: inherit;
+font-size: 1rem;
+
+transition:
+border-color 0.2s ease,
+box-shadow 0.2s ease,
+background 0.2s ease;
+}
+
+.form-group input {
+min-height: 48px;
+}
+
+.form-group textarea {
+min-height: 170px;
+resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+color: #a49588;
+}
+
+/* ---------- Form focus ---------- */
+
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+
+border-color: #8b6b52;
+
+background: #fffdf9;
+
+box-shadow:
+0 0 0 3px rgba(139, 107, 82, 0.12);
+}
+
+/* ---------- Submit button ---------- */
+
+.contact-form .button {
+align-self: flex-start;
+
+padding: 13px 25px;
+
+border: none;
+border-radius: 30px;
+
+background: #76553f;
+color: #fffaf4;
+
+font-family: inherit;
+font-size: 1rem;
+font-weight: bold;
+
+cursor: pointer;
+
+transition:
+background 0.2s ease,
+transform 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.contact-form .button:hover {
+background: #654936;
+
+color: #fffaf4;
+
+transform: translateY(-2px);
+
+box-shadow: 0 5px 15px rgba(90, 65, 45, 0.18);
+}
+
+.contact-form .button:active {
+transform: translateY(0);
+}
+
+/* ---------- Extra contact section ---------- */
+
+.contact-extra {
+margin-top: 55px;
+padding: 35px;
+
+background: #eadccc;
+
+border-radius: 16px;
+
+text-align: center;
+}
+
+.contact-extra h2 {
+margin-top: 0;
+}
+
+.contact-extra p {
+max-width: 600px;
+margin: 0 auto;
+
+color: #5e4939;
+}
+
+/* ---------- Secondary button ---------- */
+
+.contact-extra .button {
+display: inline-block;
+
+margin-top: 20px;
+
+padding: 12px 24px;
+
+border: 2px solid #76553f;
+border-radius: 30px;
+
+background: transparent;
+
+color: #76553f;
+
+text-decoration: none;
+font-weight: bold;
+
+transition:
+background 0.2s ease,
+color 0.2s ease,
+transform 0.2s ease;
+}
+
+.contact-extra .button:hover {
+background: #76553f;
+color: #fffaf4;
+
+transform: translateY(-2px);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+padding: 30px 20px;
+
+background: #4d3d31;
+color: #f8eee5;
+
+text-align: center;
+
+font-size: 0.95rem;
+}
+
+footer a {
+color: #f1d6bb;
+}
+
+/* ---------- Accessibility ---------- */
+
+:focus-visible {
+outline: 3px solid #a87952;
+outline-offset: 3px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+
+.site-header {
+padding: 18px 20px;
+
+```
+flex-direction: column;
+align-items: center;
+
+text-align: center;
+```
+
+}
+
+.site-header nav {
+justify-content: center;
+}
+
+.site-header nav a {
+padding: 7px 9px;
+
+```
+font-size: 0.92rem;
+```
+
+}
+
+.section {
+padding: 55px 18px 70px;
+}
+
+h1 {
+font-size: 2.6rem;
+}
+
+.contact-card,
+.contact-form {
+padding: 24px 20px;
+}
+
+.contact-extra {
+padding: 30px 20px;
+}
+
+.contact-form .button {
+width: 100%;
+}
+
+.contact-extra .button {
+width: 100%;
+}
+}
+
+/* ---------- Small phones ---------- */
+
+@media (max-width: 420px) {
+
+.brand {
+font-size: 1.2rem;
+}
+
+.brand img {
+width: 42px;
+height: 42px;
+}
+
+.site-header nav {
+gap: 2px;
+}
+
+.site-header nav a {
+font-size: 0.85rem;
+padding: 6px 7px;
+}
+
+h1 {
+font-size: 2.25rem;
+}
+
+.section > p:not(.eyebrow) {
+font-size: 1rem;
+}
+}
