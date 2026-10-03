@@ -1,25 +1,232 @@
 <!doctype html>
+
 <html lang="en-GB">
+
 <head>
   <link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact | Everything Wool</title><link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact | Everything Wool</title>
+
+<meta
+name="description"
+content="Get in touch with Everything Wool about our handmade wool creations, products and enquiries."
+
+>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html"><img src="assets/logo.jpeg" alt="Everything Wool logo"><span>Everything Wool</span></a>
-  <nav><a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About us</a><a class="active" href="contact.html">Contact</a></nav>
-</header>
-<main class="section narrow">
-  <p class="eyebrow">GET IN TOUCH</p><h1>Contact us</h1>
-  <p>we will try to get back to you as soon as possible.</p>
-  <div class="contact-card">
-    <p><strong>Email:</strong> <a href="mailto:everythingwool@outlook.com">everythingwool@outlook.com</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://whatsapp.com/channel/0029VbBwCRC5EjxseNPRXK3e" target="_blank" rel="noopener">Everything Wool WhatsApp channel</a></p>
-  </div>
-</main>
-<footer>© <span id="year"></span> Everything Wool</footer><script src="app.js"></script>
+
+  <!-- Header -->
+
+  <header class="site-header">
+
+```
+<a class="brand" href="index.html">
+  <img
+    src="assets/logo.jpeg"
+    alt="Everything Wool logo"
+  >
+  <span>Everything Wool</span>
+</a>
+
+<nav aria-label="Main navigation">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="about.html">About us</a>
+  <a class="active" href="contact.html">Contact</a>
+</nav>
+```
+
+  </header>
+
+  <!-- Main content -->
+
+  <main class="section narrow">
+
+```
+<p class="eyebrow">GET IN TOUCH</p>
+
+<h1>Contact us</h1>
+
+<p>
+  Have a question about our handmade products?
+  We'd love to hear from you. We will try to get back to you
+  as soon as possible.
+</p>
+
+
+<!-- Contact details -->
+<div class="contact-card">
+
+  <h2>Contact details</h2>
+
+  <p>
+    <strong>Email:</strong>
+    <a href="mailto:everythingwool@outlook.com">
+      everythingwool@outlook.com
+    </a>
+  </p>
+
+  <p>
+    <strong>WhatsApp:</strong>
+    <a
+      href="https://whatsapp.com/channel/0029VbBwCRC5EjxseNPRXK3e"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Everything Wool WhatsApp channel
+    </a>
+  </p>
+
+</div>
+
+
+<!-- Contact form -->
+<section class="contact-form-section">
+
+  <h2>Send us a message</h2>
+
+  <p>
+    Fill in the form below and your message will be sent
+    securely to Everything Wool.
+  </p>
+
+
+  <form
+    action="https://formspree.io/f/xoevbpkg"
+    method="POST"
+    class="contact-form"
+  >
+
+    <!-- Name -->
+    <div class="form-group">
+
+      <label for="name">
+        Your name
+      </label>
+
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        autocomplete="name"
+        required
+      >
+
+    </div>
+
+
+    <!-- Email -->
+    <div class="form-group">
+
+      <label for="email">
+        Email address
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        autocomplete="email"
+        required
+      >
+
+    </div>
+
+
+    <!-- Subject -->
+    <div class="form-group">
+
+      <label for="subject">
+        Subject
+      </label>
+
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        placeholder="What would you like to ask?"
+        required
+      >
+
+    </div>
+
+
+    <!-- Message -->
+    <div class="form-group">
+
+      <label for="message">
+        Message
+      </label>
+
+      <textarea
+        id="message"
+        name="message"
+        rows="7"
+        placeholder="Write your message here..."
+        required
+      ></textarea>
+
+    </div>
+
+
+    <!-- Optional Formspree settings -->
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Everything Wool website enquiry"
+    >
+
+
+    <!-- Submit -->
+    <button type="submit" class="button">
+      Send message 🧶
+    </button>
+
+  </form>
+
+</section>
+
+
+<!-- WhatsApp section -->
+<section class="contact-extra">
+
+  <h2>Prefer WhatsApp?</h2>
+
+  <p>
+    You can also follow Everything Wool through our WhatsApp channel
+    for updates and new handmade creations.
+  </p>
+
+  <a
+    class="button secondary"
+    href="https://whatsapp.com/channel/0029VbBwCRC5EjxseNPRXK3e"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Visit our WhatsApp channel
+  </a>
+
+</section>
+```
+
+  </main>
+
+  <!-- Footer -->
+
+  <footer>
+    © <span id="year"></span> Everything Wool
+  </footer>
+
+  <script src="app.js"></script>
+
 </body>
 </html>
