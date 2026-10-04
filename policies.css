@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Privacy Policy | Everything Wool</title>
+  <meta name="description" content="Privacy policy for Everything Wool.">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="policies.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img src="assets/logo.jpeg" alt="Everything Wool logo">
+    <span>Everything Wool</span>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="policy-page">
+
+  <p class="eyebrow">PRIVACY</p>
+  <h1>Privacy policy</h1>
+
+  <p class="policy-intro">
+    This page explains what information may be collected when you use
+    the Everything Wool website and how it may be used.
+  </p>
+
+  <section class="policy-card">
+    <h2>1. Information we may collect</h2>
+    <p>
+      If you contact us through our website, we may receive information
+      that you choose to provide, such as:
+    </p>
+
+    <ul>
+      <li>Your name</li>
+      <li>Your email address</li>
+      <li>The subject of your message</li>
+      <li>The contents of your message</li>
+    </ul>
+  </section>
+
+  <section class="policy-card">
+    <h2>2. Contact form</h2>
+    <p>
+      Our contact form is provided using Formspree. Information submitted
+      through the form is sent to us so that we can respond to your enquiry.
+    </p>
+
+    <p>
+      Formspree is a separate service, so its own privacy policy may also
+      apply to information submitted through the form.
+    </p>
+  </section>
+
+  <section class="policy-card">
+    <h2>3. How we use your information</h2>
+    <p>
+      Information you provide may be used to:
+    </p>
+
+    <ul>
+      <li>Respond to your messages</li>
+      <li>Answer questions about our products</li>
+      <li>Deal with enquiries or orders where applicable</li>
+      <li>Provide customer support</li>
+    </ul>
+  </section>
+
+  <section class="policy-card">
+    <h2>4. Sharing your information</h2>
+    <p>
+      We do not intentionally sell your personal information.
+    </p>
+
+    <p>
+      Information may be processed by services that help us operate the
+      website, such as our contact-form provider.
+    </p>
+  </section>
+
+  <section class="policy-card">
+    <h2>5. Website hosting</h2>
+    <p>
+      This website is hosted using GitHub Pages. Website hosting may involve
+      technical information such as IP addresses and browser information
+      being processed by the hosting provider.
+    </p>
+  </section>
+
+  <section class="policy-card">
+    <h2>6. Cookies</h2>
+    <p>
+      This website is designed to work without requiring unnecessary
+      advertising or tracking cookies.
+    </p>
+
+    <p>
+      Some third-party services used by the website may have their own
+      technical cookies or similar technologies.
+    </p>
+  </section>
+
+  <section class="policy-card">
+    <h2>7. Keeping information secure</h2>
+    <p>
+      We take reasonable steps to protect information that is provided to us.
+      However, no method of sending information over the internet can be
+      guaranteed to be completely secure.
+    </p>
+  </section>
+
+  <section class="policy-card">
+    <h2>8. Your privacy rights</h2>
+    <p>
+      Depending on your circumstances and applicable law, you may have
+      rights concerning your personal information, including rights to
+      request access to or correction of information held about you.
+    </p>
+
+    <p>
+      To ask about your information, contact:
+    </p>
+
+    <p>
+      <a href="mailto:everythingwool@outlook.com">
+        everythingwool@outlook.com
+      </a>
+    </p>
+  </section>
+
+  <section class="policy-card">
+    <h2>9. Changes to this policy</h2>
+    <p>
+      We may update this privacy policy from time to time. Any updated
+      version will be published on this page.
+    </p>
+  </section>
+
+  <section class="policy-card">
+    <h2>10. Contact us</h2>
+    <p>
+      If you have a question about this privacy policy, please
+      <a href="contact.html">contact Everything Wool</a>.
+    </p>
+  </section>
+
+  <p class="policy-note">
+    <strong>Important:</strong> This is a general privacy-policy template,
+    not legal advice. Review it against the information your website and
+    business actually collect before publishing it.
+  </p>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="delivery.html">Delivery</a>
+    <a href="returns.html">Returns</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <p>© <span id="year"></span> Everything Wool</p>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
